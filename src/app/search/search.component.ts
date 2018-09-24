@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { User } from '../user';
-import { Repository } from '../repository';
-import { HttpRequestService } from '../http-request.service';
+
 
 @Component({
   selector: 'app-search',
@@ -9,13 +7,16 @@ import { HttpRequestService } from '../http-request.service';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  user:any[];
-  repository:any[];
+  user: any[];
+  repositories:any[];
   username:string;
 
 
-  constructor(private httpRequest:HttpRequestService) { 
+  constructor() { 
     
+  }
+  getUserProfile(){
+  
   }
 
   ngOnInit() {
