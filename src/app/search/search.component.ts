@@ -7,8 +7,8 @@ import { User } from '../user'
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  user: string;
-  repos: any[];
+  
+
 
   constructor() { 
     
