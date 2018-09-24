@@ -9,8 +9,8 @@ import { HttpRequestService } from '../http-request.service'
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  user: any[];
-  repos:any[];
+  user: any;
+  repos:any;
   username:string;
 
 

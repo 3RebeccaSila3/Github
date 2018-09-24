@@ -1,3 +1,13 @@
-<p>
-  search-form works!
-</p>
+<body style="background-image:Url('./assets/download.jpeg');background-attachment:fixed" >
+  <div class="container" style="padding:60px;color:grey;">
+    <div class="col-md-8">
+          <form style="text-align:center;font-size:50px;">
+            <div class="form-group">
+              <label for="name"><b>GitHub Username</b></label>
+              <p></p>
+              <input class="form-control" type="text" placeholder="GitHub username" name="username" [(ngModel)]="username" (keyup)="searchUser()">
+            </div>
+          </form>
+        <p style="text-align:center;font-size:50px;"><b>Profile Details.</b></p>
+    </div>
+  </div>
