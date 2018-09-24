@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import 'rxjs/add/operator/map';
+import { HttpRequestService } from '../http-request.service'
 
 
 @Component({
