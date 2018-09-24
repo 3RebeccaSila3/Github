@@ -14,7 +14,7 @@ export class SearchComponent implements OnInit {
   username:string;
 
 
-  constructor() { 
+  constructor(private service:HttpRequestService) { 
     
   }
 
