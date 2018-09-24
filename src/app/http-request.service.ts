@@ -11,9 +11,22 @@ import { Repository } from './repository';
 export class HttpRequestService {
   username: string;
 
-  constructor(private_http: HttpClient) { 
+  constructor(private http: HttpClient) { 
     console.log('Service is ready for init....');
     this.username = '3RebeccaSila3';
+  }
+
+  getUser() {
+    return this.http.get("https://api.github.com/users/" + this.username)
+      .map(result => result)
+
+  }
+  getRepos() {
+    return this.http.get("https://api.github.com/users/" + this.username + '/repos')
+      .map(result => result)
+  }
+  updateUser(username: string) {
+    this.username = username;
   }
 
 }
