@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import 'rxjs/add/operator/map';
 
 
 @Component({
@@ -15,9 +16,7 @@ export class SearchComponent implements OnInit {
   constructor() { 
     
   }
-  getUserProfile(){
-  
-  }
+
 
   ngOnInit() {
   }
