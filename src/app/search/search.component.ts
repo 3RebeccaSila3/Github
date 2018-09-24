@@ -9,15 +9,15 @@ import { HttpRequestService } from '../http-request.service'
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent implements OnInit {
-  user: any;
-  repos:any;
+  user: any=[];
+  repos:any=[];
   username:string;
 
 
   constructor(private service:HttpRequestService) { 
     this.service.getUser().subscribe(user => {
-      console.log(user);
       this.user = user;
+      console.log(this.user);
     })
     this.service.getRepos().subscribe(repos => {
       this.repos = repos;
