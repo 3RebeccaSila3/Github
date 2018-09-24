@@ -10,16 +10,32 @@ import { HttpRequestService } from '../http-request.service'
 })
 export class SearchComponent implements OnInit {
   user: any[];
-  repositories:any[];
+  repos:any[];
   username:string;
 
 
   constructor(private service:HttpRequestService) { 
-    
+    this.service.getUser().subscribe(user => {
+      console.log(user);
+      this.user = user;
+    })
+    this.service.getRepos().subscribe(repos => {
+      this.repos = repos;
+    })
   }
 
 
   ngOnInit() {
+  }
+
+  searchUser() {
+    this.service.updateUser(this.username);
+    this.service.getUser().subscribe(user => {
+      this.user = user;
+    })
+    this.service.getRepos().subscribe(repos => {
+      this.repos = repos;
+    })
   }
 
 }
