@@ -7,5 +7,8 @@ import { HttpClient } from '@angular/common/http';
 export class HttpRequestService {
   username: string;
 
-  constructor(private_http: HttpClient) { }
+  constructor(private_http: HttpClient) { 
+    console.log('Service is ready for init....');
+    this.name = '3RebeccaSila3';
+  }
 }
