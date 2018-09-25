@@ -1,4 +1,6 @@
-# Search
+# Application Name
+
+Search
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.2.
 
@@ -25,3 +27,24 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Author
+
+Name:Rebecca Sila
+Email:silarebecca26@gmail.com
+Github-username:3RebeccaSila3
+
+## Description
+
+This is a github username search Application made with angular.It allows a user enter their username and inturn they get their profile,their repos and when they click view on github it directs them to github
+
+## Copyright
+
+Copyright © 2018
+
+## License
+
+MIT License
+
+## Deployed link
+
