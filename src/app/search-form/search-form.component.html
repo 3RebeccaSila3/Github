@@ -1,13 +1,12 @@
-<body style="background-image:Url('./assets/download.jpeg');background-attachment:fixed" >
-  <div class="container" style="padding:60px;color:grey;">
-    <div class="col-md-8">
-          <form style="text-align:center;font-size:50px;">
-            <div class="form-group">
-              <label for="name"><b>GitHub Username</b></label>
-              <p></p>
-              <input class="form-control" type="text" placeholder="GitHub username" name="username" [(ngModel)]="username" (keyup)="searchUser()">
-            </div>
-          </form>
-        <p style="text-align:center;font-size:50px;"><b>Profile Details.</b></p>
+<div>
+  <form (ngSubmit)='submitUsername()' #searchForm='ngForm' style="text-align:center;">
+    <div class="form-group">
+      <label for="name"><b>Github Username</b></label>
+      <input class="form-control" type="text" placeholder="Gitub username" name="username" [(ngModel)]="username" (keyup)="searchUser()">
+      <br>
+      <button type="Submit" class="btn btn-success btn-lg">Search Username</button>
     </div>
-  </div>
+  </form>
+</div>
+
+ 

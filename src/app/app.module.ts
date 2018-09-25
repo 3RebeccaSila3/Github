@@ -8,16 +8,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { SearchFormComponent } from './search-form/search-form.component';
 import { SearchComponent } from './search/search.component';
+import { RouteComponent } from './route/route.component';
 
 const appRoutes: Routes = [
-  {path:'repositories', component: SearchComponent }
+  {path:'search', component: SearchComponent }
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchFormComponent,
-    SearchComponent
+    SearchComponent,
+    RouteComponent
   ],
   imports: [
     BrowserModule,
