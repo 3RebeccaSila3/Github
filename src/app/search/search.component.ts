@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,  } from '@angular/core';
 import 'rxjs/add/operator/map';
 import { HttpRequestService } from '../http-request.service'
 
@@ -15,11 +15,11 @@ export class SearchComponent implements OnInit {
 
 
   constructor(private service:HttpRequestService) { 
-    this.service.getUser().subscribe(user => {
+    this.service.getUser(this.username).subscribe(user => {
       this.user = user;
       console.log(this.user);
     })
-    this.service.getRepos().subscribe(repos => {
+    this.service.getRepos(this.username).subscribe(repos => {
       this.repos = repos;
     })
   }
@@ -30,10 +30,10 @@ export class SearchComponent implements OnInit {
 
   searchUser() {
     this.service.updateUser(this.username);
-    this.service.getUser().subscribe(user => {
+    this.service.getUser(this.username).subscribe(user => {
       this.user = user;
     })
-    this.service.getRepos().subscribe(repos => {
+    this.service.getRepos(this.username).subscribe(repos => {
       this.repos = repos;
     })
   }

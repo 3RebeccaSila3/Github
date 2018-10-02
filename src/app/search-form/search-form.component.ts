@@ -1,4 +1,5 @@
 import { Component, OnInit, Output,EventEmitter } from '@angular/core';
+import { HttpRequestService  } from '../http-request.service';
 
 @Component({
   selector: 'app-search-form',
@@ -7,11 +8,21 @@ import { Component, OnInit, Output,EventEmitter } from '@angular/core';
 })
 export class SearchFormComponent implements OnInit {
   @Output() addUser=new EventEmitter();
-  submitUsername(){
-    this.addUser.emit(this.addUser);
+  userinput:string;
+  username:any;
+
+
+//   submitUsername(){
+//     this.userinput=username.value
+//     this.addUser.emit(this.addUser);
+// }
+
+searchUser() {
+  this.serviceData.getUser(this.username);
+  this.serviceData.getRepos(this.username);
 }
 
-  constructor() { }
+  constructor(private serviceData:HttpRequestService ) { }
 
   ngOnInit() {
   }

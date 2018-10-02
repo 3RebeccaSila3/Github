@@ -1,10 +1,11 @@
 <div>
-  <form (ngSubmit)='submitUsername()' #searchForm='ngForm' style="text-align:center;">
+  <form  style="text-align:center;">
     <div class="form-group">
       <label for="name"><b>Github Username</b></label>
-      <input class="form-control" type="text" placeholder="Gitub username" name="username" [(ngModel)]="username" (keyup)="searchUser()">
-      <br>
-      <button type="Submit" class="btn btn-success btn-lg">Search Username</button>
+      <input class="form-control" type="text" placeholder="Gitub username" name="username" [(ngModel)]="username" (keyup)="searchUser(username)">
+      Display{{userinput}}
+      
+    
     </div>
   </form>
 </div>
